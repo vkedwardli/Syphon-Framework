@@ -252,6 +252,7 @@ static void finalizer(void)
         NSDictionary<NSString *, id> *surfaceAttributes = @{(NSString*)kIOSurfaceIsGlobal: @(YES),
                                                             (NSString*)kIOSurfaceWidth: @(width),
                                                             (NSString*)kIOSurfaceHeight: @(height),
+                                                            (NSString*)kIOSurfacePixelFormat: @(kCVPixelFormatType_32BGRA),
                                                             (NSString*)kIOSurfaceBytesPerElement: @(4U)};
 
         _surface =  IOSurfaceCreate((CFDictionaryRef) surfaceAttributes);
